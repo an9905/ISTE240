@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/media/ex3new.css">
+    <script src="assets/script3.js"></script> <!-- validate form -->
+    <title>Ex3 (Updated) Menu & Forms</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="logobox">
+                <img src="assets/media/home.jpeg" alt="logo">
+                <p>Queens</p>
+            </div>
+            <div class="menubar">
+                <p>
+                    <a href="">home</a>
+                    <a href="">activities</a>
+                    <a href="">food</a>
+                    <a href="">rest</a>
+                    <a href="">people</a>
+                    <a href="">feedback</a>
+                </p>
+            </div>
+        </header>
+        <div class="content">
+            <div class="title">
+                <p>Please tell us about your visit!</p>
+            </div>
+            <hr/>
+            <div class="formstuff">
+                <form action="/assets/media/process.php" method="POST" onsubmit="return validateForm();">
+                    <div class="grouping">
+                        <label for="name">Your Name:</label>
+                        <input type="text" name="visitor" id="visitor" placeholder="Required Entry">
+                        <label for="groupnum">How many in your group?</label>
+                        <input type="number" name="groupnum" id="groupnum" placeholder="1">
+                        <label for="visitdate">When did you visit?</label>
+                        <input type="date" id="visitdate" name="visitdate">
+                    </div>
+
+                    <p class="error_msg" id="error1"></p>
+
+                    <fieldset id="place_container">
+                        <legend>Favorite Place</legend>
+                        <div class="pair">
+                            <input type="radio" name="fplace" id="bridge" value="Whitestone Bridge">
+                            <label for="bridge">Whitestone Bridge</label>
+                        </div>
+                        <div clas="pair">
+                            <input type="radio" name="fplace" id="bell" value="Bell Boulevard">
+                            <label for="bell">Bell Boulevard</label>
+                        </div>
+                       <div class="pair">
+                            <input type="radio" name="fplace" id="deli" value="Christina's Delo">
+                            <label for="deli">Christina's Deli</label>
+                       </div>
+                        <div class="pair">
+                            <input type="radio" name="fplace" id="museum" value="Queens Museum">
+                            <label for="museum">Queens Museum</label>
+                        </div>
+                        <div class="pair">
+                            <input type="radio" name="fplace" id="citi" value="Citi Field">
+                            <label for="citi">Citi Field</label>
+                        </div>
+                        <div class="pair">
+                            <input type="radio" name="fplace" id="garden" value="Botanical Garden">
+                            <label for="garden">Botanical &amp; Garden</label>
+                        </div>
+                    </fieldset>
+
+                    <p class="error_msg" id="error2"></p>
+
+                    <fieldset id="food_container">
+                        <legend>Favorite Food</legend>
+                        <div class="pair">
+                            <input type="checkbox" id="sand" name="sand" value="Sand">
+                            <label for="sand">Heart Attack Sandwich</label>
+                        </div>
+                        <div class="pair">
+                            <input type="checkbox" id="taco" name="taco" value="Taco">
+                            <label for="taco">Birria&nbsp;Tacos</label>
+                        </div>
+                        <div class="pair">
+                            <input type="checkbox" id="quesadilla" name="quesadilla" value="Quesadilla">
+                            <label for="quesadilla">Birria Quesadilla</label>
+                        </div>
+                        <div class="pair">
+                            <input type="checkbox" id="burger" name="burger" value="Burger">
+                            <label for="burger">Jackson Hole Burger</label>
+                        </div>
+                        <div class="pair">
+                            <input type="checkbox" id="fries" name="fries" value="Fries">
+                            <label for="fries">Jackson Hole Fries</label>
+                        </div>
+                        <div class="pair">
+                            <input type="checkbox" id="sticks" name="sticks" value="Sticks">
+                            <label for="sticks">Mozzerella Sticks</label>
+                        </div>
+                    </fieldset>
+                    
+                    <p class="error_msg" id="error3"></p>
+
+                    <div class="rangebox">
+                        <p>Overall, please rate your visit</p>
+                        1<input type="range" name="visitrate" id="visitrate" min="1" max="10">10
+                    </div>
+
+                    <div class="buttonbox">
+                        <div class="submitbutton">
+                            <input type="submit">
+                        </div>
+                    </div>
+                </form>
+            </div> <!--end .formstuff-->
+        </div>
+    </div>
+</body>
+</html>

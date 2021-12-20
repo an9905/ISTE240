@@ -1,0 +1,63 @@
+body {
+    margin:0;
+    background-image: url('side.jpg'); 
+    background-repeat: repeat-y;
+    background-color: rgb(179, 165, 179);
+    /* background image for the left panel of the screen */
+}
+.wrapper {
+    margin-left: 150px;
+}
+
+.header {
+    height: 7em;
+    border-bottom: 2px solid black;
+    margin: 0 2em;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color:purple
+    /* header which says Exercise 2, changed color, border and font */
+}
+.header h2 {
+    position: relative;
+    font-size: 3.5em;
+    /* relative positioning for header */
+}
+.garden {
+    margin: 3em 2em 0 2em;
+}
+.flowerbox {
+    display: inline-block;
+    height: 180px;
+    width: 180px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: 1% 1% 3% 1%;
+    background: rgba(121, 134, 121, 0.945);
+    transition: all 1s;
+    /* did this so that they all can be used multiple times */
+}
+.flower {
+    line-height: 100px;
+    font-size: 120px;
+    position: relative;
+    top:3%;
+    left:3%;
+    color: rgb(135, 190, 135);
+    text-shadow: 3px 3px rgb(243, 226, 180);
+}
+.text {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top:-20%;
+    left:25%;
+}
+.flowerbox:hover {
+    background-color: rgb(143, 123, 153);
+    cursor:pointer;
+    border: 4px solid rgb(167, 120, 129);
+    height:170px;
+    width: 170px;
+    /* changes color when hovered over, as well as the cursor */
+}
